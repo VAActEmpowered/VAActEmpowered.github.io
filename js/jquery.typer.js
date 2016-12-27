@@ -18,8 +18,10 @@ String.prototype.rightChars = function(n){
       clearDelay        : 500,
       typeDelay         : 200,
       clearOnHighlight  : true,
+      wholeWord         : true,
       typerDataAttr     : 'data-typer-targets',
-      typerInterval     : 2500
+      typerInterval     : 2500,
+      random            : false
     },
     highlight,
     clearText,
@@ -161,7 +163,21 @@ String.prototype.rightChars = function(n){
       });
     }
 
-    $e.typeTo(targets[Math.floor(Math.random()*targets.length)]);
+    // Following line for random:
+    //$e.typeTo(targets[Math.floor(Math.random()*targets.length)]);
+
+      // Determine the next index from the targets array and type that
+      if(typeof($e.data('currentIndex')) === "undefined"){
+        $e.data('currentIndex', 0);
+      } else {
+        $e.data('currentIndex', $e.data('currentIndex') + 1);
+      }
+
+      if(typeof(targets[$e.data('currentIndex')]) === "undefined"){
+        $e.data('currentIndex', 0);
+      }
+
+      $e.typeTo(targets[$e.data('currentIndex')], $e.data('typerOptions'));
   };
 
   // Expose our options to the world.
@@ -200,7 +216,7 @@ String.prototype.rightChars = function(n){
       j = 0;
 
 	if (currentText === newString) {
-       console.log("Our strings are equal, nothing to type");
+       console.log("Our strings are equal, nothing to type:" + newString);
        return $e;
      }
 
@@ -211,15 +227,17 @@ String.prototype.rightChars = function(n){
 
     $e.data('typing', true);
 
-    while (currentText.charAt(i) === newString.charAt(i)) {
-      i++;
-    }
+    if(!$.typer.options.wholeWord){
+      while (currentText.charAt(i) === newString.charAt(i)) {
+        i++;
+      }
 
-    while (currentText.rightChars(j) === newString.rightChars(j)) {
-      j++;
+      while (currentText.rightChars(j) === newString.rightChars(j)) {
+        j++;
+      }
     }
-
     newString = newString.substring(i, newString.length - j + 1);
+    //console.log(newString);
 
     $e.data({
       oldLeft: currentText.substring(0, i),
@@ -228,7 +246,7 @@ String.prototype.rightChars = function(n){
       rightStop: currentText.length - j,
       primaryColor: $e.css('color'),
       backgroundColor: $e.css('background-color'),
-      text: newString
+      text: newString,
     });
 
     highlight($e);
