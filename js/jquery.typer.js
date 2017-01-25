@@ -21,7 +21,6 @@ String.prototype.rightChars = function(n){
       wholeWord         : true,
       typerDataAttr     : 'data-typer-targets',
       typerInterval     : 2500,
-      random            : false
     },
     highlight,
     clearText,

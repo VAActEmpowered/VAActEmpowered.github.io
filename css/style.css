@@ -161,6 +161,25 @@ ul {
   display: block;  
 }
 
+li a .logo-main{
+  list-style-type: none;
+}
+
+.logo-main li a{
+  float: left;
+  display: block;
+  font-size: 35px;
+  font-weight: bold;
+  color: #fff;
+  list-style-type: none;
+  line-height: 50px;
+  padding-top: 18px;
+}
+
+.logo-main li a:hover {
+  color: #e1e5e1;
+}
+
 /* nav */
 .nav {
   float: right;
@@ -173,7 +192,7 @@ ul {
 }
 
 .nav ul li {
-  display: inline-block;
+  display: inline;
 }
 
 .nav ul li a {
@@ -185,7 +204,7 @@ ul {
   line-height: 20px;
   text-transform: uppercase;
   padding: 0 9px;
-  margin-left: 13px;
+  margin-left: 0px;
 }
 
 .nav ul li a:hover {
@@ -775,6 +794,39 @@ ul.footer-social li a i:hover {
 .hero .btn-transparent {
   margin-right: 8px;
 }
+
+/*experimental*/
+.service-button {
+  padding: 0 15px;
+}
+
+.service-button i a{
+  font-size: 40px !important;
+  color: #10b8c7;
+  width: 100px !important;
+  height: 100px;
+  line-height: 100px;
+  text-align: center;
+  border-radius: 50%;
+  background-color: #f5f5f5;
+  display: block;
+  margin: 0 auto 25px;
+  transition-duration: 0.4s;  
+}
+
+.service-button:hover > i a {
+  color: #fff;
+  background-color: #10b8c7;
+}
+
+.service-button img {
+  margin-bottom: 20px;
+} 
+
+.service-button p {
+  font-size: 13px;
+}
+/*experimental*/
 
 .service-box {
   padding: 0 15px;
