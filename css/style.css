@@ -810,7 +810,7 @@ ul.footer-social li a i:hover {
   background-color: #f5f5f5;
   display: block;
   margin: 0 auto 25px;
-  transition-duration: 0.4s;  
+  transition: 0.25s ease; 
 }
 
 .service-button:hover > i a {
