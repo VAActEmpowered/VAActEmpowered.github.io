@@ -28,10 +28,10 @@
 		  <div class="row">
 		    <div class="col-lg-4 col-md-4 col-sm-4">
 		    <ul class="logo-main">
-	        <li><a href="index.html">ACT Empowered</a></li>
+	        <li><a href="index.html" class="logo">
+	          <img src="img/Logo/LogoWhitePlain.png" alt="" />
+		    </a></li>
 	        </ul>
-		      <!--<img src="img/Logo/logo_light_temp.png" alt="" />
-		    </a>-->
 			</div>
 		    <div class="col-lg-8 col-md-8 col-sm-8">
 		    <ul class="second-nav">
@@ -65,7 +65,7 @@
 		    <p class="hero-subtitle">
 		      ACT Empowered is a non-partisan, non-profit organization founded by women dedicated to advancing progressive values through education, leadership, and action.
 		    </p>
-			<a class="btn btn-transparent">
+			<a class="btn btn-transparent" href="#" data-toggle="modal" data-target="#myModal">
 			  Get Involved
 			</a>
 			<a class="btn btn-primary" href="about.html">
@@ -81,7 +81,9 @@
 		    <div class="row">		  
 		      <div class="col-lg-4 col-md-4 col-sm-4">
 			    <div class="service-button">
-			      <i style="font-size: 44px; font-style: normal; font-weight: bold;"><a href="services.html">A</a></i>
+			      <i><a href="services.html">
+			      	<img src="img/Afist.png" alt="" />
+			      </a></i>
 				  <div class="service-title">
 				    <h4>We Advocate</h4>
 			      </div>
@@ -92,7 +94,9 @@
 		      </div>			
 		      <div class="col-lg-4 col-md-4 col-sm-4">
 			    <div class="service-button">
-			      <i style="font-size: 44px; font-style: normal; font-weight: bold;"><a href="services.html">C</a></i>
+			      <i style="font-size: 44px; font-style: normal; font-weight: bold;"><a href="services.html">
+			      	<img src="img/Cspeech.png" alt="" />
+			      </a></i>
 				  <div class="service-title">
 				    <h4>We Communicate</h4>
 			      </div>
@@ -103,7 +107,9 @@
 		      </div>
 		      <div class="col-lg-4 col-md-3 col-sm-4">
 			    <div class="service-button">
-			      <i style="font-size: 44px; font-style: normal; font-weight: bold;"><a href="services.html">T</a></i>
+			      <i style="font-size: 44px; font-style: normal; font-weight: bold;"><a href="services.html">
+			      	<img src="img/Tflower.png" alt="" />
+			      </a></i>
 				  <div class="service-title">
 				    <h4>We Will Transform</h4>
 			      </div>
@@ -313,7 +319,7 @@
 	      <div class="container">		  
 	        <div class="row">			
 	          <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
-	            <a class="logo" href="index.html"><img src="img/Logo/logo_light_temp.png" alt="" /></a>
+	            <a class="logo-foot" href="index.html"><img src="img/Logo/logo_light_temp.png" alt="" /></a>
 				<p class="text-widget">
 				  ACT Empowered is a non-partisan, non-profit organization founded by women dedicated to advancing progressive values through education, leadership, and action.
 				</p>				
@@ -424,8 +430,8 @@
         <div class="modal-content">	
           <div class="modal-header">
 	        <div class="form-top-left ">
-              <h4 class="modal-title" id="myModalLabel">Contact us</h4>
-		      <p class="modal-subtitle">Fill in the form bellow to send us a message:</p>
+              <h4 class="modal-title" id="myModalLabel">Get Involved</h4>
+		      <p class="modal-subtitle">Fill in the form bellow to receive news and updates about ACT Empowered events:</p>
             </div>
             <div class="form-top-right">
               <i class="fa fa-envelope"></i>
@@ -448,6 +454,16 @@
                     <div class="control-group">
                       <div class="controls">
 			            <input type="email" class="form-control" placeholder="Email" id="email" required data-validation-required-message="Please enter your email" />
+		              </div>
+	                </div>	
+	                <div class="control-group">
+                      <div class="controls">
+			            <input type="number" class="form-control" placeholder="Zip Code" id="zip" minlength="5" maxlength="5" required data-validation-required-message="Please enter a valid Zip Code" />
+		              </div>
+	                </div>	
+	                <div class="control-group">
+                      <div class="controls">
+			            <input type="tel" class="form-control" placeholder="Phone Number (Optional)" id="phone"/>
 		              </div>
 	                </div>			  
                     <div class="control-group">

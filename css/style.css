@@ -158,7 +158,13 @@ ul {
 /* logo */
 .logo {
   float: left;
-  display: block;  
+  display: block;
+  -ms-transform: scale(0.35, 0.35);
+  -webkit-transform: scale(0.35, 0.35);
+  position: relative;
+  width: 300px;
+  margin-top: -30px;
+  margin-left:-90px;
 }
 
 li a .logo-main{
@@ -166,18 +172,11 @@ li a .logo-main{
 }
 
 .logo-main li a{
-  float: left;
-  display: block;
-  font-size: 35px;
-  font-weight: bold;
-  color: #fff;
-  list-style-type: none;
-  line-height: 50px;
-  padding-top: 18px;
 }
 
-.logo-main li a:hover {
-  color: #e1e5e1;
+.logo-foot img:hover {
+  opacity: 0.7;
+  filter:alpha(opacity=70) !important; /* For IE8 and earlier */
 }
 
 /* nav */
@@ -819,8 +818,9 @@ ul.footer-social li a i:hover {
   background-color: #10b8c7;
 }
 
-.service-button img {
+.service-button i a img {
   margin-bottom: 20px;
+  transform: scale(0.7,0.7);
 } 
 
 .service-button p {
