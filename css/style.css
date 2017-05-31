@@ -155,6 +155,20 @@ ul {
   color: #b0b0b0 !important;
 }
 
+/* centered columns styles */
+.row-centered {
+    text-align:center;
+}
+.col-centered {
+    display:inline-block;
+    float:none;
+    /* reset the text-align */
+    text-align:left;
+    /* inline-block space fix */
+    margin-right:-4px;
+    margin-left:4.166666667%
+}
+
 /* logo */
 .logo {
   float: left;
@@ -403,7 +417,7 @@ ul.social-places li a {
 .block {
   clear: both;
   overflow: hidden;
-  padding: 65px 0;
+  padding: 40px 0;
   width: 100%;
   background-color: #fff;
 }
@@ -1152,7 +1166,6 @@ ul.social li a {
 /* Gallery Styles */
 .gallery-wrapper {
   width: 100%;
-  padding: 0 0 50px;
 }
 
 /* Blog styles */
